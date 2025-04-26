@@ -5,7 +5,6 @@ using System.IO;
 
 class Program
 {
-    // Define a class to match the JSON structure
     public class User
     {
         public string Name { get; set; }
@@ -15,23 +14,39 @@ class Program
 
     static void Main(string[] args)
     {
-        // Path to the local JSON file
         string filePath = "user.json";
 
-        // Read the JSON data from the file
+        // 1. Read existing users
         string jsonResponse = File.ReadAllText(filePath);
-
-        // Deserialize the JSON into a list of User objects
         List<User> users = JsonConvert.DeserializeObject<List<User>>(jsonResponse);
 
-        // Display each user's information
-        Console.WriteLine("Users from JSON file:");
+        // 2. Display existing users
+        Console.WriteLine("Current users:");
         foreach (var user in users)
         {
-            Console.WriteLine($"Name: {user.Name}");
-            Console.WriteLine($"Age: {user.Age}");
-            Console.WriteLine($"City: {user.City}");
-            Console.WriteLine();
+            Console.WriteLine($"{user.Name}, {user.Age}, {user.City}");
+        }
+
+        // 3. Add a new user
+        User newUser = new User
+        {
+            Name = "Alice Smith",
+            Age = 25,
+            City = "London"
+        };
+
+        users.Add(newUser);
+        Console.WriteLine("\nNew user added!");
+
+        // 4. Save updated list back to JSON file
+        string updatedJson = JsonConvert.SerializeObject(users, Formatting.Indented);
+        File.WriteAllText(filePath, updatedJson);
+
+        // 5. Show all users again
+        Console.WriteLine("\nUpdated user list:");
+        foreach (var user in users)
+        {
+            Console.WriteLine($"{user.Name}, {user.Age}, {user.City}");
         }
     }
 }
