@@ -1,0 +1,16 @@
+[
+    {
+        "Name": "John",
+        "Age": 30,
+        "City": "New York",
+        "UserType": "Admin",
+        "AdminRole": "SuperAdmin"
+    },
+    {
+        "Name": "Emily",
+        "Age": 24,
+        "City": "London",
+        "UserType": "User",
+        "Membership": "Gold"
+    }
+]
