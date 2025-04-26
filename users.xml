@@ -1,1 +1,10 @@
-﻿
+﻿<Users>
+	<User>
+		<Name>Mike</Name>
+		<Age>35</Age>
+	</User>
+	<User>
+		<Name>Emma</Name>
+		<Age>28</Age>
+	</User>
+</Users>
