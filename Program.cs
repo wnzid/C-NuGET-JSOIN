@@ -48,5 +48,8 @@ class Program
         {
             Console.WriteLine($"{user.Name}, {user.Age}, {user.City}");
         }
+        // 6. Read users from XML file
+        Console.WriteLine("\nReading users from XML:");
+        XMLReader.ReadXML("users.xml");
     }
 }
