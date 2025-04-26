@@ -1,8 +1,14 @@
-# C# NuGET, JSOIN
+# C# NuGet, JSON & XML Project
 
-version info:
-v1: copied the example on moodle
-v2: made required changes to run/execute the program and get output
-v3: task complete: Add new entries to a JSON object
-v4: added XML call fuction and created XML files
-v5: used inheritance to extend user classes
+This project demonstrates working with JSON, XML, and inheritance in C# using the Newtonsoft.Json library.
+
+---
+
+## Version History
+
+- **v1**: Copied the example from Moodle  
+- **v2**: Made required changes to run and get output  
+- **v3**: Task complete – added new entries to a JSON object  
+- **v4**: Added XML call function and created XML file  
+- **v5**: Used inheritance to extend user classes  
+- **v6**: Created new JSON file with user types and deserialized it
